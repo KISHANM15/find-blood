@@ -2,18 +2,13 @@
 
 A simple, responsive web app to **register blood donors** and **search by blood group**, using **HTML, CSS, JavaScript**, and **Firebase Firestore**.
 
-## Your Firebase project (reference)
+## Firebase configuration
 
-| Item | Value |
-|------|--------|
-| **Project name** | blood donar |
-| **Project ID** | `blood-donar-e1975` |
-| **Project number** | `887857474495` |
+- Add your own Firebase web app config in `app.js` under `firebaseConfig`.
+- Get values from **Firebase Console → Project settings → General → Your apps**.
+- Do not commit private project identifiers if you do not want them public.
 
-- **Firebase Console:** [console.firebase.google.com](https://console.firebase.google.com/) → open project **blood-donar-e1975**
-- **Web app config** (`apiKey`, `appId`, etc.) lives in **`app.js`** as `firebaseConfig`. Update it there if you add a new web app or rotate keys.
-
-> **Note:** The web API key in `app.js` is normal for Firebase web apps. Protect your data with **Firestore security rules**, not by hiding the key.
+> **Note:** Firebase web API keys are client-side by design. Data protection should be enforced with proper Firestore security rules.
 
 ## Project files
 
