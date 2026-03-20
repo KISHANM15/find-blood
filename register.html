@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register Donor | Blood Donor Finder</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body data-page="register">
+    <header class="navbar">
+      <a class="brand" href="index.html">
+        <span class="brand-mark">+</span>
+        <span>Blood Donor Finder</span>
+      </a>
+      <nav class="nav-links">
+        <a class="nav-link" href="index.html">Home</a>
+        <a class="nav-link active" href="register.html">Register</a>
+        <a class="nav-link" href="search.html">Find Donor</a>
+        <label class="theme-switcher" for="themeSelect" aria-label="Select theme">
+          <span class="theme-icon" aria-hidden="true">◐</span>
+          <select id="themeSelect" class="theme-select">
+            <option value="light">Light</option>
+            <option value="dark">Dark</option>
+            <option value="night">Night</option>
+          </select>
+        </label>
+      </nav>
+    </header>
+
+    <main class="page-shell">
+      <section class="panel">
+        <h1 class="panel-title">Register as a Donor</h1>
+        <p class="panel-subtitle">Help save lives by joining the donor network.</p>
+
+        <form id="registerForm" class="form-grid" novalidate>
+          <div class="form-group">
+            <label for="name">Full Name</label>
+            <input id="name" name="name" type="text" placeholder="Enter full name" />
+            <small class="error-text" id="nameError"></small>
+          </div>
+
+          <div class="form-group">
+            <label for="bloodGroup">Blood Group</label>
+            <select id="bloodGroup" name="bloodGroup">
+              <option value="">Select blood group</option>
+              <option value="A+">A+</option>
+              <option value="A-">A-</option>
+              <option value="B+">B+</option>
+              <option value="B-">B-</option>
+              <option value="AB+">AB+</option>
+              <option value="AB-">AB-</option>
+              <option value="O+">O+</option>
+              <option value="O-">O-</option>
+            </select>
+            <small class="error-text" id="bloodGroupError"></small>
+          </div>
+
+          <div class="form-group">
+            <label for="location">Location</label>
+            <input id="location" name="location" type="text" placeholder="City or area" />
+            <small class="error-text" id="locationError"></small>
+          </div>
+
+          <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input
+              id="phone"
+              name="phone"
+              type="tel"
+              inputmode="numeric"
+              maxlength="10"
+              placeholder="10-digit number"
+            />
+            <small class="error-text" id="phoneError"></small>
+          </div>
+
+          <button id="registerBtn" class="btn btn-primary full-width" type="submit">
+            Register Donor
+          </button>
+
+          <p id="formMessage" class="message" aria-live="polite"></p>
+        </form>
+      </section>
+    </main>
+
+    <script type="module" src="app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Find Donor | Blood Donor Finder</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body data-page="search">
+    <header class="navbar">
+      <a class="brand" href="index.html">
+        <span class="brand-mark">+</span>
+        <span>Blood Donor Finder</span>
+      </a>
+      <nav class="nav-links">
+        <a class="nav-link" href="index.html">Home</a>
+        <a class="nav-link" href="register.html">Register</a>
+        <a class="nav-link active" href="search.html">Find Donor</a>
+        <label class="theme-switcher" for="themeSelect" aria-label="Select theme">
+          <span class="theme-icon" aria-hidden="true">◐</span>
+          <select id="themeSelect" class="theme-select">
+            <option value="light">Light</option>
+            <option value="dark">Dark</option>
+            <option value="night">Night</option>
+          </select>
+        </label>
+      </nav>
+    </header>
+
+    <main class="page-shell">
+      <section class="panel">
+        <h1 class="panel-title">Search Donors</h1>
+        <p class="panel-subtitle">Select blood group to view available donors.</p>
+
+        <div class="search-controls">
+          <div class="form-group">
+            <label for="searchBloodGroup">Blood Group</label>
+            <select id="searchBloodGroup">
+              <option value="">Select blood group</option>
+              <option value="A+">A+</option>
+              <option value="A-">A-</option>
+              <option value="B+">B+</option>
+              <option value="B-">B-</option>
+              <option value="AB+">AB+</option>
+              <option value="AB-">AB-</option>
+              <option value="O+">O+</option>
+              <option value="O-">O-</option>
+            </select>
+            <small class="error-text" id="searchBloodGroupError"></small>
+          </div>
+
+          <button id="searchBtn" class="btn btn-primary" type="button">Find Donors</button>
+        </div>
+
+        <div class="results-head">
+          <p id="resultCount" class="result-count">Total donors found: 0</p>
+        </div>
+
+        <div id="loadingState" class="loading hidden">
+          <span class="spinner"></span>
+          <span>Fetching donors...</span>
+        </div>
+
+        <div id="results" class="results-grid"></div>
+        <p id="searchMessage" class="message" aria-live="polite"></p>
+      </section>
+    </main>
+
+    <script type="module" src="app.js"></script>
+  </body>
+</html>
